@@ -67,34 +67,38 @@ body {
 
 .sections {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Alterado de nowrap para wrap */
+  justify-content: center; /* Adicionado para centralizar as seções */
 }
 
 .sections p {
-  width: 12%;
+  flex: 0 0 12%; /* Alterado de width: 12% para flex: 0 0 12% */
   color: #FFF;
   font-size: 30px;
   font-family: Raleway;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-align: center; /* Adicionado para centralizar o texto */
 }
 
 .tarefa {
   margin-left: 18%;
+  flex: 0 0 70%; /* Adicionado para ocupar 70% do espaço */
 }
 
 .status {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 20px; /* Alterado de 200px para 20px */
+  padding-right: 20px; /* Alterado de 200px para 20px */
+  flex: 0 0 18%; /* Adicionado para ocupar 18% do espaço */
 }
 
 .border {
   border-style: groove;
   color: #FFF;
   width: auto;
-  margin-left: 300px;
-  margin-right: 340px;
+  margin-left: 10%; /* Alterado de 300px para 10% */
+  margin-right: 10%; /* Alterado de 340px para 10% */
   margin-top: 40px;
   margin-bottom: 30px;
   align-items: center;
@@ -102,36 +106,43 @@ body {
 
 .nametarefa {
   margin-left: 18%;
+  flex: 0 0 70%; /* Adicionado para ocupar 70% do espaço */
 }
 
 .task-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Alterado de nowrap para wrap */
+  align-items: center; /* Adicionado para centralizar verticalmente */
 }
 
 .task-container p {
-  width: 12%;
+  flex: 0 0 12%; /* Alterado de width: 12% para flex: 0 0 12% */
   color: #FFF;
   font-size: 25px;
   font-family: Raleway;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center; /* Adicionado para centralizar o texto */
 }
 
 .task-container input {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 20px; /* Alterado de 200px para 20px */
+  padding-right: 20px; /* Alterado de 200px para 20px */
+  flex: 0 0 70%; /* Adicionado para ocupar 70% do espaço */
 }
 
 .task-checkbox {
-  margin-left: 295px;
+  margin-left: 10%; /* Alterado de 295px para 10% */
   border-color: #FFF;
 }
 
 .task-options {
-  padding-left: 350px;
-  padding-right: 200px;
+  padding-left: 15%; /* Alterado de 350px para 15% */
+  padding-right: 20px; /* Alterado de 200px para 20px */
+  flex: 0 0 30%; /* Alterado de padding-right: 200px para flex: 0 0 30% */
+  display: flex;
+  justify-content: flex-end; /* Adicionado para alinhar à direita */
 }
 
 .bt {
@@ -144,7 +155,7 @@ body {
 }
 
 .add-task-container input {
-  width: 870px;
+  width: 100%; /* Alterado de 870px para 100% */
   background-color: #2D2D2D;
   color: #FFF;
   font-size: 25px;
@@ -156,7 +167,7 @@ body {
 
 .add-task-button {
   background-color: #2D2D2D;
-  padding-right: 400px;
+  padding-right: 20px; /* Alterado de 400px para 20px */
 }
 
 .notification {
@@ -173,4 +184,72 @@ body {
   font-size: 20px;
   color: #000;
   border: 2px solid #000;
+}
+
+// Estilos para resolução de 1920x1080 pixels
+@media screen and (min-width: 1920px) {
+  .sections {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .sections p {
+    flex: 0 0 12%;
+    text-align: left;
+  }
+
+  .tarefa {
+    margin-left: 18%;
+    flex: 0 0 70%;
+  }
+
+  .status {
+    padding-left: 200px;
+    padding-right: 200px;
+    flex: 0 0 18%;
+  }
+
+  .border {
+    margin-left: 300px;
+    margin-right: 340px;
+  }
+
+  .nametarefa {
+    margin-left: 18%;
+    flex: 0 0 70%;
+  }
+
+  .task-container {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .task-container p {
+    flex: 0 0 12%;
+    text-align: left;
+  }
+
+  .task-container input {
+    padding-left: 200px;
+    padding-right: 200px;
+    flex: 0 0 70%;
+  }
+
+  .task-checkbox {
+    margin-left: 295px;
+  }
+
+  .task-options {
+    padding-left: 350px;
+    padding-right: 200px;
+    flex: 0 0 30%;
+  }
+
+  .add-task-container input {
+    width: 870px;
+  }
+
+  .add-task-button {
+    padding-right: 400px;
+  }
 }

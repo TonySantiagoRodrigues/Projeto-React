@@ -4,7 +4,6 @@ import editIcon from "../../assets/edit.svg";
 import addIcon from "../../assets/adicionar.svg";
 
 
-
 const Tela = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
